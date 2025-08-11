@@ -1,5 +1,5 @@
 /*
 !cluster-config
-cluster-addons
+!cluster-addons
 !GitRepository.yaml
 !.gitignore

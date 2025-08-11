@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: external-dns-configuration
+  namespace: external-dns
+data:
+  EXTERNAL_DNS_PROVIDER: "cloudflare"
+  EXTERNAL_DNS_SOURCE: "ingress"
+  EXTERNAL_DNS_LOG_LEVEL: "debug"
+  EXTERNAL_DNS_LOG_FORMAT: "text"
+  EXTERNAL_DNS_POLICY: "sync"
+  EXTERNAL_DNS_INTERVAL: "10m" 
+  EXTERNAL_DNS_REGISTRY: "txt"
+  EXTERNAL_DNS_CLOUDFLARE_PROXIED: "1"
+  EXTERNAL_DNS_TXT_PREFIX: "external-dns"
