@@ -1,7 +1,8 @@
 apiVersion: v1
 stringData:
-    CLOUDFLARE_API_TOKEN: ENC[AES256_GCM,data:KuoWFQ7/Qwv0Ws41OK0bH8iO3+VeyuV1BaDp/Y4AnGfOkhLfXTEUrQ==,iv:NQqglS06u4UYpOan0XUWnvN1E52gikUPJQj2gRsggfw=,tag:5FhX8V3U+ZeHe7otsv2GeQ==,type:str]
+    CLOUDFLARE_API_TOKEN: ENC[AES256_GCM,data:XlDZtU2wThCQ8GlsxH8IeKyKO17u5pwoptCjFZX3IoXRIZ89OpunPA==,iv:bEXmp3gZXmdPg6loi7N99M1xn/Eo+v70+e9siM9DHew=,tag:ZBdqobF/I6yh4IfiMSDsbg==,type:str]
 kind: Secret
+type: Opaque
 metadata:
     name: external-dns-cf-tokens
     namespace: external-dns
@@ -10,13 +11,13 @@ sops:
         - recipient: age1eglsl9yplq9t3pemaxhpsvd956h2j8n67llvm55hrvc3zsr67utqfs25um
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBjc0ZFUVI5aDV6bEZDOGdG
-            dlRiWVljYXVYRU9wYmFMWlJMU0hMRk05QndBCjFFZHhJbWl0Zkd4bUJTZTVUeSty
-            ZlU1SU41enZqY3FQbk9XOU84R3o2bEkKLS0tICtEMi84M1RZVFc3Z2I3Zk9KQURY
-            UWdiYW4welFNYXRmb1VQaUd6dlMwdm8KbajmobW3ntRyx+ISOpkr5h1H5fe6gfpn
-            6U29KlxAqJrvsIZD5nyvfC0FgoGRzNMj5husUWU61F6aczr9XXBMGg==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB0S0tSM1NnempseGdraFo0
+            aEtlQlhHZVlid2lDalJJN1Avb1lZekd5bGxJCjVqL0poMVA1YUZtMzQ4TUY4Z1pl
+            b0kwVmF3WUJsTFl6VGlVNlZtZHhJZEUKLS0tIFBkSFlKVDZSZGVIcjIxWEt4WnZF
+            dE5JUFZKaHJxRVplcDRVTmZXd1J2YUUK3zxYozvLyCyH5dyVnQOYxtd6zscAkucD
+            e4n3YE65/gy1sQ7Gy/QJZo/nrxwL16leWbCu2nhus+ly/bH2BeSkJg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2025-08-11T17:58:15Z"
-    mac: ENC[AES256_GCM,data:zDKOb0u4ve+BxxGUFtlYjnd9Itx2dMtfQWGG+Ym5JMkSXjeVKYeNI0sWgXQdEB0TrmqkZWws56BeDsx7zCxhRnpYFX7NnvD/JTsdHt3G2tyYNqmim6poNVVhg8fbiGzUo8iWgOPDr4awVHcy4aptLnpBvsAcDPPFErCnkXVBq7g=,iv:EeDaaOd9woKng16A4YDSirVLcjGosS9Fa9PJ/QpVunQ=,tag:+DhTAGuTZXoJG+BMuOGwQA==,type:str]
+    lastmodified: "2025-08-11T18:30:07Z"
+    mac: ENC[AES256_GCM,data:0H1BQbivN4Lje9fFmILhg42i0PDB3R9LDGqMnoJHLQD1AADtvJHEiHYcBM6bQ9cbsMivpquTNUBKyv+E3WzYBEyyqo1pURJInggSUyPGqezJHzw8AoDVBeDlq99p0EhGvkJGh4t1EO32//HEfV+mW1PfLuTA0mhNWrGDLf4vwvw=,iv:wAea9XDqenrsoYYWRtenUjA6iSkvDio45q5fZa67p1c=,tag:/41b1f6QnIcdH0IG0X0Vow==,type:str]
     encrypted_regex: ^(data|stringData)$
     version: 3.10.2
