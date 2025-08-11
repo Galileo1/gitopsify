@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: gitopsify
+  namespace: cluster-config
+spec:
+  interval: 3m0s
+  timeout: 2m
+  url: ssh://git@github.com/Galileo1/gitopsify.git
+  ref:
+    branch: main
+  secretRef: #  Secret should be in the same namespace as the GitRepository
+    name: flux-git-deploy-key # deploy key
