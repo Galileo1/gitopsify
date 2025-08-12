@@ -1,35 +1,35 @@
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1
-# kind: Kustomization
-# metadata:
-#   name: emissary-crds
-#   namespace: cluster-config
-# spec:
-#   interval: 1h
-#   retryInterval: 3m
-#   timeout: 10m
-#   sourceRef:
-#     kind: GitRepository
-#     name: kind-k8s-cluster
-#   path: ./cluster-addons/components/emissary-ingress/crds
-#   prune: true
-#   wait: true
-# ---
-# apiVersion: kustomize.toolkit.fluxcd.io/v1
-# kind: Kustomization
-# metadata:
-#   name: emissary-ingress
-#   namespace: cluster-config
-# spec:
-#   interval: 1h
-#   retryInterval: 3m
-#   timeout: 10m
-#   sourceRef:
-#     kind: GitRepository
-#     name: kind-k8s-cluster
-#   path: ./cluster-addons/components/emissary-ingress/deployment
-#   prune: true
-#   wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: emissary-crds
+  namespace: cluster-config
+spec:
+  interval: 1h
+  retryInterval: 3m
+  timeout: 10m
+  sourceRef:
+    kind: GitRepository
+    name: gitopsify
+  path: ./cluster-addons/components/emissary-ingress/crds
+  prune: true
+  wait: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: emissary-ingress
+  namespace: cluster-config
+spec:
+  interval: 1h
+  retryInterval: 3m
+  timeout: 10m
+  sourceRef:
+    kind: GitRepository
+    name: gitopsify
+  path: ./cluster-addons/components/emissary-ingress/deployment
+  prune: true
+  wait: true
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization

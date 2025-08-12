@@ -1,0 +1,18 @@
+apiVersion: getambassador.io/v3alpha1
+kind: Host
+metadata:
+  name: main-wildcard-host
+  namespace: emissary
+spec:
+  hostname: '*'
+  tlsSecret:
+    name: <To Be Created>
+  tls:
+    min_tls_version: v1.2
+    cipher_suites:
+    - "[ECDHE-RSA-AES256-GCM-SHA384|ECDHE-RSA-CHACHA20-POLY1305]"
+    - "[ECDHE-ECDSA-AES256-GCM-SHA384|ECDHE-ECDSA-CHACHA20-POLY1305]"
+    ecdh_curves:
+    - X25519
+    - P-384
+    alpn_protocols: h2,http/1.1
