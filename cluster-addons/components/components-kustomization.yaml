@@ -21,6 +21,8 @@ metadata:
   name: emissary-ingress
   namespace: cluster-config
 spec:
+  dependsOn:
+  - name: emissary-crds
   interval: 1h
   retryInterval: 3m
   timeout: 10m
