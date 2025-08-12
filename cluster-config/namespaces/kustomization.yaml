@@ -5,3 +5,4 @@ resources:
   - cluster-config.yaml
   - emissary.yaml
   - external-dns.yaml
+  - emissary-system.yaml
