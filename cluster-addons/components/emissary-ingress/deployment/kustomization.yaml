@@ -6,14 +6,14 @@ resources:
   - helmrepository.yaml
   # - host-main.yaml
 
-patches:
- - target:
-      kind: Role
-      name: emissary-ingress
-   patch: |-
-    - op: add 
-      path: /rules/-
-      value:             
-        apiGroups: ["discovery.k8s.io"]
-        resources: ["endpointslices"]
-        verbs: ["get","watch","list"]
+# patches:
+#  - target:
+#       kind: Role
+#       name: emissary-ingress
+#    patch: |-
+#     - op: add 
+#       path: /rules/-
+#       value:             
+#         apiGroups: ["discovery.k8s.io"]
+#         resources: ["endpointslices"]
+#         verbs: ["get","watch","list"]

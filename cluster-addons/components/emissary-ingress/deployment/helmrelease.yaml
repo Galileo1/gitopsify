@@ -52,3 +52,16 @@ spec:
     serviceAccount: 
       create: yes
       name: emissary-ingress
+  postRenderers:
+    - kustomize:
+        patches:
+          - target:
+              kind: Role
+              name: emissary-ingress
+            patch: |
+              - op: add
+                path: /rules/-
+                value:
+                  apiGroups: ["discovery.k8s.io"]
+                  resources: ["endpointslices"]
+                  verbs: ["get", "watch", "list"]
